@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+//Rafiul Islam
+//Daffodil International University
+//01701-729512
+
+void selectionSort(int data[], int size)
+{
+    int minElement;
+    for(int i = 0; i < size-1; i++)
+    {
+        minElement = i;
+        for(int j = i+1; j < size; j++)
+        {
+
+            if(data[minElement] > data[j])
+            {
+                minElement = j;
+            }
+        }
+
+        swap(data[i], data[minElement]);
+    }
+}
+
+void displaySelectionSort(int* data, int size)
+{
+
+    int i = 0;
+    while(size != i)
+    {
+        printf("%d ",data[i]);
+        i++;
+    }
+
+
+
+}
+
+int main()
+{
+    int data[] = {7, 4, 5, 9, 8, 2, 1};
+    int size =  sizeof(data) / sizeof(int);
+    selectionSort(data, size);
+    displaySelectionSort(data, size);
+}
