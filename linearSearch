@@ -1,0 +1,43 @@
+#include<stdio.h>
+
+int linearSearch(int arr[], int size, int element)
+{
+    if (size > 0){
+
+            for (int i = 0; i <= size-1; i++){    ///Rafiul Islam
+                                                  //Daffodil International University
+
+                if(arr[i] == element){
+
+                    return arr[i];
+                }
+            }
+
+            return -1;
+
+    }else{
+
+       printf("Array is Empty!");
+    }
+}
+
+
+int main(){
+
+   int arr[] = {1, 2, 3, 56, 2, 7, 8, 9};
+   int size = sizeof(arr) / sizeof(int);
+   //printf("%d\n", size);
+   int element = 3;
+  int searchElement = linearSearch(arr, size, element);
+
+  if(searchElement == -1){
+    printf("The Number is %d Not Found", element);
+  }else{
+
+  printf("The Number is %d Found", searchElement);
+
+  }
+
+  return 0;
+
+}
